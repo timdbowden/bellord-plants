@@ -179,6 +179,18 @@
     <Compile Include="Migrations\201309301625139_Add Initial Build.Designer.cs">
       <DependentUpon>201309301625139_Add Initial Build.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310031511513_Tidied Data Annotation.cs" />
+    <Compile Include="Migrations\201310031511513_Tidied Data Annotation.Designer.cs">
+      <DependentUpon>201310031511513_Tidied Data Annotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310031519258_Added date formatting.cs" />
+    <Compile Include="Migrations\201310031519258_Added date formatting.Designer.cs">
+      <DependentUpon>201310031519258_Added date formatting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310031523358_Added date on End Time.cs" />
+    <Compile Include="Migrations\201310031523358_Added date on End Time.Designer.cs">
+      <DependentUpon>201310031523358_Added date on End Time.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Answer.cs" />
@@ -267,6 +279,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201309301625139_Add Initial Build.resx">
       <DependentUpon>201309301625139_Add Initial Build.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310031511513_Tidied Data Annotation.resx">
+      <DependentUpon>201310031511513_Tidied Data Annotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310031519258_Added date formatting.resx">
+      <DependentUpon>201310031519258_Added date formatting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310031523358_Added date on End Time.resx">
+      <DependentUpon>201310031523358_Added date on End Time.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

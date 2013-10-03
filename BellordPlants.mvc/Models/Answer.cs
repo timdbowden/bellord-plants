@@ -12,6 +12,7 @@ namespace BellordPlants.mvc.Models
 
         [Required(ErrorMessage="You must include an answer")]
         [Display(Name="Answer",Description="Answer to the gardener's question")]
+        [DataType(DataType.MultilineText)]
         public string Response { get; set; }
 
         [Display(Name="Answer Author")]
