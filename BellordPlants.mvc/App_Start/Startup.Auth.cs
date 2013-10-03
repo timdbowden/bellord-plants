@@ -24,7 +24,7 @@ namespace BellordPlants.mvc
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication();
+            app.UseGoogleAuthentication();
         }
     }
 }
