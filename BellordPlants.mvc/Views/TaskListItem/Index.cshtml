@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BellordPlants.mvc.Models.TaskListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Channel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NotificationPoint)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Channel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotificationPoint)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TaskListItemId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TaskListItemId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TaskListItemId })
+        </td>
+    </tr>
+}
+
+</table>

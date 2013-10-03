@@ -1,0 +1,25 @@
+﻿@model BellordPlants.mvc.Models.Answer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Answer</legend>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Response)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Response)
+        </dd>
+
+    </dl>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AnswerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
