@@ -120,6 +120,34 @@ namespace BellordPlants.mvc.Controllers
             return RedirectToAction("Index");
         }
 
+        public PartialViewResult _QuestionAnswers(int questionID)
+        {
+            ViewBag.QuestionId = questionID;
+
+            List<Answer> answers = (from a in db.Answers where a.QuestionId == questionID select a).ToList();
+
+            return PartialView("_QuestionAnswers", answers);
+
+        }
+
+        [ChildActionOnly()]
+        public PartialViewResult _AnswerForm(int questionID)
+        {
+            Answer answer = new Answer() { QuestionId = questionID };
+            return PartialView("_AnswerForm", answer);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public PartialViewResult _Submit(Answer answer)
+        {
+            db.Answers.Add(answer);
+            db.SaveChanges();
+
+            //List<Answer> answers = db.Answers.Where(a => a.QuestionId == answer.QuestionId).ToList();
+
+            return _QuestionAnswers(answer.QuestionId);
+        }
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

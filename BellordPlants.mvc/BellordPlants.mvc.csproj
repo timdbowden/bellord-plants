@@ -191,6 +191,14 @@
     <Compile Include="Migrations\201310031523358_Added date on End Time.Designer.cs">
       <DependentUpon>201310031523358_Added date on End Time.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310041506148_Added answer partial views.cs" />
+    <Compile Include="Migrations\201310041506148_Added answer partial views.Designer.cs">
+      <DependentUpon>201310041506148_Added answer partial views.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310041512260_Small Changes.cs" />
+    <Compile Include="Migrations\201310041512260_Small Changes.Designer.cs">
+      <DependentUpon>201310041512260_Small Changes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Answer.cs" />
@@ -269,6 +277,8 @@
     <Content Include="Views\Answer\Details.cshtml" />
     <Content Include="Views\Answer\Edit.cshtml" />
     <Content Include="Views\Answer\Index.cshtml" />
+    <Content Include="Views\Answer\_QuestionAnswers.cshtml" />
+    <Content Include="Views\Answer\_AnswerForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -288,6 +298,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310031523358_Added date on End Time.resx">
       <DependentUpon>201310031523358_Added date on End Time.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310041506148_Added answer partial views.resx">
+      <DependentUpon>201310041506148_Added answer partial views.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310041512260_Small Changes.resx">
+      <DependentUpon>201310041512260_Small Changes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

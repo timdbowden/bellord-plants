@@ -1,0 +1,34 @@
+﻿@model IEnumerable<BellordPlants.mvc.Models.Answer>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div id="answers">
+    
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Response)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Response)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AnswerId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AnswerId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AnswerId })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+
+@Html.Action("_AnswerForm", new { QuestionId = ViewBag.QuestionId})

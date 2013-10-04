@@ -16,6 +16,9 @@ namespace BellordPlants.mvc.Models
         public string Response { get; set; }
 
         [Display(Name="Answer Author")]
-        public virtual ApplicationUser AnswerAuthor { get; set; }
+        public virtual int AnswerAuthorId { get; set; }
+
+        public int QuestionId { get; set; }
+        public virtual Question Question { get; set; }
     }
 }

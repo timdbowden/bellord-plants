@@ -1,0 +1,33 @@
+﻿@model BellordPlants.mvc.Models.Answer
+
+
+
+@using (Ajax.BeginForm("_Submit", "Answer", new AjaxOptions() { UpdateTargetId = "answers" } ))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    
+    @Html.HiddenFor(m => m.QuestionId)
+    
+    <fieldset class="form-horizontal">
+        <legend>Answer</legend>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Response, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Response)
+                @Html.ValidationMessageFor(model => model.Response, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Add Answer" class="btn" />
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

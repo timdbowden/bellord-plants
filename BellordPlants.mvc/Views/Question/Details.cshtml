@@ -27,6 +27,12 @@
 
     </dl>
 </fieldset>
+<div id="answers">
+
+    @Html.Action("_QuestionAnswers", "Answer", new { QuestionId = Model.QuestionId });
+
+</div>
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.QuestionId }) |
     @Html.ActionLink("Back to List", "Index")
