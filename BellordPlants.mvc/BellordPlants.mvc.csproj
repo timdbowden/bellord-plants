@@ -199,6 +199,10 @@
     <Compile Include="Migrations\201310041512260_Small Changes.Designer.cs">
       <DependentUpon>201310041512260_Small Changes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310051035091_Change author id to guid.cs" />
+    <Compile Include="Migrations\201310051035091_Change author id to guid.Designer.cs">
+      <DependentUpon>201310051035091_Change author id to guid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Answer.cs" />
@@ -221,7 +225,9 @@
     <Content Include="img\glyphicons-halflings.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\bellordplants - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\bellordplants - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\bellordplants - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\bellordplants - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310041512260_Small Changes.resx">
       <DependentUpon>201310041512260_Small Changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310051035091_Change author id to guid.resx">
+      <DependentUpon>201310051035091_Change author id to guid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

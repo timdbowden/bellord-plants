@@ -4,36 +4,21 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="hero-unit">
 
-<fieldset>
-    <legend>Question</legend>
-    <dl>
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+        <h3>@Html.DisplayFor(model => model.Title)</h3>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Details)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Details)
-        </dd>
-
-    </dl>
-</fieldset>
-<div id="answers">
-
-    @Html.Action("_QuestionAnswers", "Answer", new { QuestionId = Model.QuestionId });
-
+        <p class="lead">@Html.DisplayFor(model => model.Details)</p>
 </div>
 
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.QuestionId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+  
+    <div id="answerssection">
+
+        @Html.Action("_QuestionAnswers", "Answer", new { QuestionId = Model.QuestionId });
+
+    </div>
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.QuestionId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

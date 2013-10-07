@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BellordPlants.mvc.Models;
+using Microsoft.AspNet.Identity;
 
 namespace BellordPlants.mvc.Controllers
 {
@@ -53,7 +54,7 @@ namespace BellordPlants.mvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                //question.QuestionAuthor = (ApplicationUser)User;
+                question.QuestionAuthorID = new Guid(User.Identity.GetUserId());
                 db.Questions.Add(question);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
